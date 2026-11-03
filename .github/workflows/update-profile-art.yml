@@ -32,6 +32,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      - name: Allow GitHub to index the triggering push
+        if: github.event_name == 'push'
+        run: sleep 90
+
       - name: Scrape and validate GitHub's public contribution calendar
         run: python scripts/fetch_contributions.py
 
