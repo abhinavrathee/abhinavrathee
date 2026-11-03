@@ -29,33 +29,6 @@
 
 ---
 
-<!-- Expanded profile: this independent section begins after the original terminal card. -->
-<div align="center">
-
-<h2><code>abhinav@github ~ $ ./beyond-the-terminal</code></h2>
-
-<img src="./assets/extended/portrait.svg" width="330" alt="Abhinav Rathee rendered as a full-colour dot-matrix portrait">
-
-<br>
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=23&duration=2600&pause=900&color=39D353&center=true&vCenter=true&width=650&lines=Abhinav+Rathee;AI+Engineer+%C2%B7+Software+Developer+%C2%B7+Product+Builder;Building%2C+learning%2C+and+shipping+in+public" alt="Animated profile summary">
-
-<br><br>
-
-<a href="https://www.linkedin.com/in/abhinav-rathee/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-<a href="mailto:abhinav1rathee@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-<a href="https://github.com/abhinavrathee"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-<a href="https://leetcode.com/u/r-abhinaver/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"></a>
-<a href="https://x.com/abhinavratheee"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=abhinavrathee&style=flat&color=39d353&label=profile+views" alt="profile views">
-
-</div>
-
----
-
 ## `~/` GitHub signal
 
 <div align="center">
