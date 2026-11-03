@@ -1,11 +1,5 @@
 <div align="center">
 
-<h3><code>abhinav@github ~ $ ./contributions.sh</code></h3>
-
-<img src="./contrib-heatmap.svg" width="860" alt="Abhinav Rathee's GitHub contribution activity, refreshed daily" />
-
-<br><br>
-
 <h3><code>abhinav@github ~ $ whoami</code></h3>
 
 <table>
