@@ -12,6 +12,7 @@ import json
 import os
 import re
 import sys
+from datetime import date as date_cls, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -26,6 +27,14 @@ def fetch_days():
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
 
+    summary = soup.select_one(".js-yearly-contributions")
+    summary_text = summary.get_text(" ", strip=True) if summary else ""
+    summary_match = re.search(r"\b(\d+)\s+contributions?\b", summary_text, re.I)
+    if not summary_match:
+        print("could not read GitHub's yearly contribution total", file=sys.stderr)
+        sys.exit(1)
+    reported_total = int(summary_match.group(1))
+
     cells = soup.select("td.ContributionCalendar-day")
     if not cells:
         print("no calendar cells found -- github markup may have changed", file=sys.stderr)
@@ -35,7 +44,8 @@ def fetch_days():
     for td in cells:
         date = td.get("data-date")
         if not date:
-            continue
+            print("calendar cell is missing its date", file=sys.stderr)
+            sys.exit(1)
         td_id = td.get("id")
         tooltip_el = soup.find("tool-tip", attrs={"for": td_id}) if td_id else None
         text = tooltip_el.get_text(strip=True) if tooltip_el else ""
@@ -43,10 +53,30 @@ def fetch_days():
             count = 0
         else:
             m = re.match(r"(\d+)", text)
-            count = int(m.group(1)) if m else 0
+            if not m:
+                print(f"could not read contribution count for {date}: {text!r}", file=sys.stderr)
+                sys.exit(1)
+            count = int(m.group(1))
         days.append({"date": date, "count": count, "level": int(td.get("data-level") or 0)})
 
     days.sort(key=lambda d: d["date"])
+
+    # Never publish a card from partially parsed or stale markup. GitHub's
+    # visible total and the sum of its daily calendar values must agree.
+    parsed_total = sum(day["count"] for day in days)
+    if parsed_total != reported_total:
+        print(
+            f"GitHub calendar mismatch: summary says {reported_total}, "
+            f"daily cells sum to {parsed_total}; refusing to update",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    parsed_dates = [date_cls.fromisoformat(day["date"]) for day in days]
+    if any(current - previous != timedelta(days=1) for previous, current in zip(parsed_dates, parsed_dates[1:])):
+        print("calendar dates are not a complete consecutive daily range", file=sys.stderr)
+        sys.exit(1)
+
     return days
 
 

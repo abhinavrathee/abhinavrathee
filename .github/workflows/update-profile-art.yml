@@ -14,6 +14,9 @@ name: Update profile art
       - "scripts/fetch_contributions.py"
       - "scripts/render_stats_svg.py"
       - "scripts/requirements.txt"
+      - "README.md"
+      - "data/contributions.json"
+      - "stats.svg"
 
 concurrency:
   group: profile-stats
@@ -37,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Scrape real contribution data (no auth needed)
+      - name: Scrape and validate GitHub's public contribution calendar
         run: python scripts/fetch_contributions.py
 
       - name: Render streak / numbers card
