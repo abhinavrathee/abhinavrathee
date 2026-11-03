@@ -34,7 +34,7 @@ jobs:
 
       - name: Allow GitHub to index the triggering push
         if: github.event_name == 'push'
-        run: sleep 90
+        run: sleep 240
 
       - name: Scrape and validate GitHub's public contribution calendar
         run: python scripts/fetch_contributions.py
