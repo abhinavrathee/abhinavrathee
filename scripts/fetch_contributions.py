@@ -6,9 +6,8 @@ write data/contributions.json with the raw days plus derived stats
 (current streak, longest streak, best day, monthly totals).
 
 No token, no auth, no GraphQL -- just the public HTML GitHub already serves.
-Run daily by .github/workflows/update-profile-art.yml.
+Run periodically by .github/workflows/update-profile-art.yml.
 """
-import datetime
 import json
 import os
 import re
@@ -99,7 +98,6 @@ def build_data(days):
 
     return {
         "username": USERNAME,
-        "generated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "range": {"start": days[0]["date"], "end": days[-1]["date"]},
         "total_contributions": total,
         "active_days": active_days,
