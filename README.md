@@ -19,12 +19,16 @@
 
 <p><b>AI Engineer · Software Developer · Product Builder</b></p>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhinav-rathee/)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abhinav1rathee@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Projects-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/abhinavrathee)
-[![LeetCode](https://img.shields.io/badge/LeetCode-Solve-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/r-abhinaver/)
-[![X](https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/abhinavratheee)
-[![Linktree](https://img.shields.io/badge/Linktree-All_Links-43E55E?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/abhinavrathee)
+<p align="center">
+  <a href="https://rathee.is-a.dev/"><img src="https://img.shields.io/badge/Portfolio-rathee.is--a.dev-181717?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"></a>
+  <a href="https://www.linkedin.com/in/abhinav-rathee/"><img src="https://img.shields.io/badge/LinkedIn-abhinav--rathee-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://x.com/abhinavratheee"><img src="https://img.shields.io/badge/X-%40abhinavratheee-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
+  <a href="mailto:abhinav1rathee@gmail.com"><img src="https://img.shields.io/badge/Gmail-abhinav1rathee%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <img src="https://komarev.com/ghpvc/?username=abhinavrathee&style=flat-square&color=8b5cf6&label=profile+views" alt="Profile views">
+  <a href="https://github.com/abhinavrathee"><img src="https://img.shields.io/badge/GitHub-abhinavrathee-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://leetcode.com/u/r-abhinaver/"><img src="https://img.shields.io/badge/LeetCode-r--abhinaver-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode"></a>
+  <a href="https://linktr.ee/abhinavrathee"><img src="https://img.shields.io/badge/Linktree-All+links-43E55E?style=flat-square&logo=linktree&logoColor=white" alt="Linktree"></a>
+</p>
 
 <br>
 
