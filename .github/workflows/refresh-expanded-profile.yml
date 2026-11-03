@@ -37,9 +37,9 @@ jobs:
           --limit 7 --values --curve 0.4
           --exclude "shell,makefile,dockerfile,batchfile,procfile"
 
-      - name: Generate language bars from the supplied Andrii reference
+      - name: Generate language bars from owned public and private repositories
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.LANGUAGE_STATS_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
           OUT_DIR: ${{ runner.temp }}/language-bars
         run: |
