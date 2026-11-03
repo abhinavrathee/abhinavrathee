@@ -45,5 +45,9 @@ jobs:
       - name: Commit updated art
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          # Keep refresh commits out of the profile's contribution total.
           commit_message: "chore: refresh profile stats [skip ci]"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
           file_pattern: "data/contributions.json stats.svg"
