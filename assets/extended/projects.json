@@ -1,0 +1,8 @@
+{
+  "projects": [
+    { "repo": "PulmoScan-TB-Detection" },
+    { "repo": "RetryRail" },
+    { "repo": "VeloxServe" },
+    { "repo": "Arithon" }
+  ]
+}

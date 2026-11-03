@@ -25,3 +25,104 @@
 <br>
 
 </div>
+
+---
+
+<!-- Expanded profile: this independent section begins after the original terminal card. -->
+<div align="center">
+
+<h2><code>abhinav@github ~ $ ./beyond-the-terminal</code></h2>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/portrait-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/extended/portrait-light.svg">
+  <img src="./assets/extended/portrait-dark.svg" width="310" alt="Abhinav Rathee rendered as a dot-matrix portrait">
+</picture>
+
+<br>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=23&duration=2600&pause=900&color=39D353&center=true&vCenter=true&width=650&lines=Abhinav+Rathee;AI+Engineer+%C2%B7+Software+Developer+%C2%B7+Product+Builder;Building%2C+learning%2C+and+shipping+in+public" alt="Animated profile summary">
+
+</div>
+
+---
+
+## `~/` GitHub signal
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/card-stats-dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="./assets/extended/card-stats-light.svg">
+        <img src="./assets/extended/card-stats-dark.svg" width="450" alt="Abhinav's GitHub statistics">
+      </picture>
+    </td>
+    <td align="center" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/language-radar-dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="./assets/extended/language-radar-light.svg">
+        <img src="./assets/extended/language-radar-dark.svg" width="400" alt="Language mix across Abhinav's public repositories">
+      </picture>
+    </td>
+  </tr>
+</table>
+
+<img src="./contrib-heatmap.svg" width="94%" alt="GitHub contribution calendar">
+
+</div>
+
+---
+
+## `~/` selected work
+
+<div align="center">
+
+<table>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/abhinavrathee/PulmoScan-TB-Detection">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/card-PulmoScan-TB-Detection-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="./assets/extended/card-PulmoScan-TB-Detection-light.svg">
+          <img src="./assets/extended/card-PulmoScan-TB-Detection-dark.svg" width="420" alt="PulmoScan TB Detection project">
+        </picture>
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/abhinavrathee/RetryRail">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/card-RetryRail-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="./assets/extended/card-RetryRail-light.svg">
+          <img src="./assets/extended/card-RetryRail-dark.svg" width="420" alt="RetryRail project">
+        </picture>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/abhinavrathee/VeloxServe">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/card-VeloxServe-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="./assets/extended/card-VeloxServe-light.svg">
+          <img src="./assets/extended/card-VeloxServe-dark.svg" width="420" alt="VeloxServe project">
+        </picture>
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/abhinavrathee/Arithon">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/card-Arithon-dark.svg">
+          <source media="(prefers-color-scheme: light)" srcset="./assets/extended/card-Arithon-light.svg">
+          <img src="./assets/extended/card-Arithon-dark.svg" width="420" alt="Arithon project">
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<sub>Cards refresh automatically from the public GitHub API each day.</sub>
+
+</div>

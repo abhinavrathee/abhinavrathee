@@ -1,0 +1,53 @@
+name: Refresh expanded profile
+
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "assets/extended/projects.json"
+      - "scripts/render_extended_cards.py"
+      - "scripts/render_extended_radar.py"
+      - ".github/workflows/refresh-expanded-profile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render live language radar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python scripts/render_extended_radar.py
+          --github "${{ github.repository_owner }}"
+          -o assets/extended/language-radar
+          --limit 7 --values --curve 0.4
+          --exclude "shell,makefile,dockerfile,batchfile,procfile"
+
+      - name: Render GitHub and project cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python scripts/render_extended_cards.py
+          --user "${{ github.repository_owner }}"
+          --projects assets/extended/projects.json
+          --out assets/extended
+
+      - name: Commit refreshed assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/extended/card-*.svg assets/extended/language-radar-*.svg
+          git diff --staged --quiet || git commit -m "chore: refresh expanded profile"
+          git push
