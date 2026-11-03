@@ -104,7 +104,6 @@ and I solve problems for fun when neither of those is cooperating.
 ## `~/` contribution calendar
 
 <!-- 3D isometric calendar, regenerated every 6h by .github/workflows/metrics.yml -->
-<img src="profile-readme-references/gargibhardwaj24-main/assets/metrics.isocalendar.svg" width="90%" alt="3D isometric contribution calendar">
 
 <br><br>
 
