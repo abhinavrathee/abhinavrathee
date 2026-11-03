@@ -29,33 +29,6 @@
 
 ---
 
-## `~/` GitHub signal
-
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center" valign="top">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/card-stats-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="./assets/extended/card-stats-light.svg">
-        <img src="./assets/extended/card-stats-dark.svg" width="450" alt="Abhinav's GitHub statistics">
-      </picture>
-    </td>
-    <td align="center" valign="top">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./assets/extended/language-radar-dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="./assets/extended/language-radar-light.svg">
-        <img src="./assets/extended/language-radar-dark.svg" width="400" alt="Language mix across Abhinav's public repositories">
-      </picture>
-    </td>
-  </tr>
-</table>
-
-<img src="./contrib-heatmap.svg" width="94%" alt="GitHub contribution calendar">
-
-</div>
-
 ---
 
 ## `~/` selected work
