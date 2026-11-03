@@ -25,7 +25,6 @@
   <a href="https://x.com/abhinavratheee"><img src="https://img.shields.io/badge/X-%40abhinavratheee-000000?style=flat-square&logo=x&logoColor=white" alt="X"></a>
   <a href="mailto:abhinav1rathee@gmail.com"><img src="https://img.shields.io/badge/Gmail-abhinav1rathee%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
   <img src="https://komarev.com/ghpvc/?username=abhinavrathee&style=flat-square&color=8b5cf6&label=profile+views" alt="Profile views">
-  <a href="https://github.com/abhinavrathee"><img src="https://img.shields.io/badge/GitHub-abhinavrathee-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
   <a href="https://leetcode.com/u/r-abhinaver/"><img src="https://img.shields.io/badge/LeetCode-r--abhinaver-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode"></a>
   <a href="https://linktr.ee/abhinavrathee"><img src="https://img.shields.io/badge/Linktree-All+links-43E55E?style=flat-square&logo=linktree&logoColor=white" alt="Linktree"></a>
 </p>
