@@ -9,6 +9,9 @@
   </tr>
 </table>
 
+<br>
+
+<img src="./assets/extended/language-bars.svg" width="620" alt="Top programming languages by bytes and public repository count">
 
 <br><br>
 
