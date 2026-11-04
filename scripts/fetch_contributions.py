@@ -12,69 +12,96 @@ import json
 import os
 import re
 import sys
-from datetime import date as date_cls, timedelta
+from datetime import date as date_cls, datetime, timedelta
+from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
 
 USERNAME = os.environ.get("GH_PROFILE_USER", "abhinavrathee")
 URL = f"https://github.com/users/{USERNAME}/contributions"
+PROFILE_TIMEZONE = ZoneInfo(os.environ.get("GH_PROFILE_TIMEZONE", "Asia/Kolkata"))
 OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "contributions.json")
 
 
 def fetch_days():
-    resp = requests.get(URL, headers={"User-Agent": "profile-readme-bot/1.0"}, timeout=30)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+    # The default contributions page is cached as a rolling window and can lag
+    # a user's local day. Request each calendar year explicitly, then construct
+    # the same Sunday-aligned rolling window GitHub shows on the profile.
+    today = datetime.now(PROFILE_TIMEZONE).date()
+    first_day = today - timedelta(days=365)
+    first_day -= timedelta(days=(first_day.weekday() + 1) % 7)
+    all_days = {}
 
-    summary = soup.select_one(".js-yearly-contributions")
-    summary_text = summary.get_text(" ", strip=True) if summary else ""
-    summary_match = re.search(r"\b(\d+)\s+contributions?\b", summary_text, re.I)
-    if not summary_match:
-        print("could not read GitHub's yearly contribution total", file=sys.stderr)
-        sys.exit(1)
-    reported_total = int(summary_match.group(1))
-
-    cells = soup.select("td.ContributionCalendar-day")
-    if not cells:
-        print("no calendar cells found -- github markup may have changed", file=sys.stderr)
-        sys.exit(1)
-
-    days = []
-    for td in cells:
-        date = td.get("data-date")
-        if not date:
-            print("calendar cell is missing its date", file=sys.stderr)
-            sys.exit(1)
-        td_id = td.get("id")
-        tooltip_el = soup.find("tool-tip", attrs={"for": td_id}) if td_id else None
-        text = tooltip_el.get_text(strip=True) if tooltip_el else ""
-        if re.search(r"no contributions", text, re.I):
-            count = 0
-        else:
-            m = re.match(r"(\d+)", text)
-            if not m:
-                print(f"could not read contribution count for {date}: {text!r}", file=sys.stderr)
-                sys.exit(1)
-            count = int(m.group(1))
-        days.append({"date": date, "count": count, "level": int(td.get("data-level") or 0)})
-
-    days.sort(key=lambda d: d["date"])
-
-    # Never publish a card from partially parsed or stale markup. GitHub's
-    # visible total and the sum of its daily calendar values must agree.
-    parsed_total = sum(day["count"] for day in days)
-    if parsed_total != reported_total:
-        print(
-            f"GitHub calendar mismatch: summary says {reported_total}, "
-            f"daily cells sum to {parsed_total}; refusing to update",
-            file=sys.stderr,
+    for year in range(first_day.year, today.year + 1):
+        resp = requests.get(
+            URL,
+            params={"from": f"{year}-01-01", "to": f"{year}-12-31"},
+            headers={"User-Agent": "profile-readme-bot/1.0", "Cache-Control": "no-cache"},
+            timeout=30,
         )
-        sys.exit(1)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
 
+        summary = soup.select_one(".js-yearly-contributions")
+        summary_text = summary.get_text(" ", strip=True) if summary else ""
+        summary_match = re.search(r"\b(\d+)\s+contributions?\b", summary_text, re.I)
+        if not summary_match:
+            print(f"could not read GitHub's contribution total for {year}", file=sys.stderr)
+            sys.exit(1)
+        reported_total = int(summary_match.group(1))
+
+        cells = soup.select("td.ContributionCalendar-day")
+        expected_days = 366 if date_cls(year, 12, 31).timetuple().tm_yday == 366 else 365
+        if len(cells) != expected_days:
+            print(
+                f"GitHub returned {len(cells)} calendar days for {year}; "
+                f"expected {expected_days}, refusing to update",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+
+        year_days = []
+        for td in cells:
+            date = td.get("data-date")
+            if not date:
+                print(f"calendar cell for {year} is missing its date", file=sys.stderr)
+                sys.exit(1)
+            td_id = td.get("id")
+            tooltip_el = soup.find("tool-tip", attrs={"for": td_id}) if td_id else None
+            text = tooltip_el.get_text(strip=True) if tooltip_el else ""
+            if re.search(r"no contributions", text, re.I):
+                count = 0
+            else:
+                match = re.match(r"(\d+)", text)
+                if not match:
+                    print(f"could not read contribution count for {date}: {text!r}", file=sys.stderr)
+                    sys.exit(1)
+                count = int(match.group(1))
+            year_days.append({"date": date, "count": count, "level": int(td.get("data-level") or 0)})
+
+        parsed_total = sum(day["count"] for day in year_days)
+        if parsed_total != reported_total:
+            print(
+                f"GitHub calendar mismatch for {year}: summary says {reported_total}, "
+                f"daily cells sum to {parsed_total}; refusing to update",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+        all_days.update({day["date"]: day for day in year_days})
+
+    days = [
+        all_days[day.isoformat()]
+        for day in (first_day + timedelta(days=offset) for offset in range((today - first_day).days + 1))
+        if day.isoformat() in all_days
+    ]
     parsed_dates = [date_cls.fromisoformat(day["date"]) for day in days]
     if any(current - previous != timedelta(days=1) for previous, current in zip(parsed_dates, parsed_dates[1:])):
         print("calendar dates are not a complete consecutive daily range", file=sys.stderr)
+        sys.exit(1)
+
+    if len(days) != (today - first_day).days + 1:
+        print("calendar is missing dates in the rolling profile window", file=sys.stderr)
         sys.exit(1)
 
     return days
