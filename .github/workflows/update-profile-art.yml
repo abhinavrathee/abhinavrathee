@@ -12,8 +12,9 @@ name: Update profile art
     branches: [main]
 
 concurrency:
-  group: profile-stats
-  cancel-in-progress: false
+  # Share one serialized queue with the workflow that commits other profile assets.
+  group: profile-generated-assets
+  queue: max
 
 permissions:
   contents: write

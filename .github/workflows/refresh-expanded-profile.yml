@@ -17,6 +17,11 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  # Keep generated-asset commits from racing the contribution-card workflow.
+  group: profile-generated-assets
+  queue: max
+
 jobs:
   render:
     runs-on: ubuntu-latest
