@@ -27,6 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # A run may wait in the shared queue; always branch from latest main.
+          ref: main
 
       - uses: actions/setup-python@v5
         with:

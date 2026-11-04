@@ -26,6 +26,9 @@ jobs:
       GH_PROFILE_USER: abhinavrathee
     steps:
       - uses: actions/checkout@v4
+        with:
+          # A run may wait in the shared queue; always branch from latest main.
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
