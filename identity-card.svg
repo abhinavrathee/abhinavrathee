@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="880" viewBox="0 0 840 880" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111722"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="840" height="880" rx="12" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="839" height="879" rx="12" fill="none" stroke="#30363d"/>
+  <line x1="0" y1="30" x2="840" y2="30" stroke="#30363d"/>
+  <circle cx="20" cy="15" r="5" fill="#ff5f56"/>
+  <circle cx="36" cy="15" r="5" fill="#ffbd2e"/>
+  <circle cx="52" cy="15" r="5" fill="#27c93f"/>
+  <text x="420" y="19" fill="#7d8590" font-size="12" text-anchor="middle">abhinav@github:~$ ./about.sh</text>
+
+  <g transform="translate(52 156)">
+    <rect x="0" y="0" width="5" height="50" rx="2.5" fill="#2f81f7"/>
+    <text x="24" y="19" fill="#7d8590" font-size="15" letter-spacing="2">PROFILE / INITIALIZED</text>
+    <text x="24" y="61" fill="#e6edf3" font-family="ui-sans-serif, system-ui, sans-serif" font-size="36" font-weight="700">Abhinav Rathee</text>
+    <text x="24" y="96" fill="#8b949e" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">AI Engineer · Full-Stack Developer</text>
+  </g>
+
+  <rect x="40" y="306" width="760" height="430" rx="12" fill="#111722" stroke="#30363d"/>
+  <circle cx="68" cy="344" r="4" fill="#3fb950"/>
+  <text x="84" y="349" fill="#7d8590" font-size="14">about.config</text>
+  <line x1="60" y1="370" x2="780" y2="370" stroke="#30363d"/>
+
+  <g font-size="19" xml:space="preserve">
+    <text x="68" y="420"><tspan fill="#ff7b72">const</tspan><tspan fill="#e6edf3"> dev</tspan><tspan fill="#8b949e"> = </tspan><tspan fill="#d2a8ff">{</tspan></text>
+
+    <text x="92" y="468"><tspan fill="#79c0ff">name</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#a5d6ff">"Abhinav Rathee"</tspan><tspan fill="#8b949e">,</tspan></text>
+    <text x="92" y="516"><tspan fill="#79c0ff">role</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#a5d6ff">"AI Engineer · Full-Stack Developer"</tspan><tspan fill="#8b949e">,</tspan></text>
+    <text x="92" y="564"><tspan fill="#79c0ff">focus</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#a5d6ff">["Applied AI", "Backend", "Automation"]</tspan><tspan fill="#8b949e">,</tspan></text>
+    <text x="92" y="612"><tspan fill="#79c0ff">builds</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#a5d6ff">"Scalable, useful software"</tspan><tspan fill="#8b949e">,</tspan></text>
+    <text x="92" y="660"><tspan fill="#79c0ff">studies</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#a5d6ff">"BE CSE '27 · Chitkara University"</tspan><tspan fill="#8b949e">,</tspan></text>
+
+    <text x="68" y="708" fill="#d2a8ff">};</text>
+  </g>
+
+  <line x1="0" y1="824" x2="840" y2="824" stroke="#30363d"/>
+  <text x="20" y="853" fill="#7d8590" font-size="13">abhinav@github:~$</text>
+  <text x="178" y="853" fill="#3fb950" font-size="13">ready to build</text>
+  <rect x="283" y="841" width="8" height="15" rx="1" fill="#c9d1d9" opacity="0.9"/>
+</svg>

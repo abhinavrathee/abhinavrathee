@@ -4,7 +4,7 @@
 
 <table>
   <tr>
-    <td valign="top"><img src="./abhinav-ascii.svg" width="420" alt="ASCII portrait generated from Abhinav's photo" /></td>
+    <td valign="top"><img src="./identity-card.svg" width="420" alt="Terminal-style introduction for Abhinav Rathee" /></td>
     <td valign="top"><img src="./stats.svg" width="420" alt="Abhinav's GitHub contribution and streak statistics" /></td>
   </tr>
 </table>
