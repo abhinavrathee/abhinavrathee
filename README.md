@@ -1,8 +1,8 @@
-<h2>About Me</h2>
+<h2 align="center">About Me</h2>
 
 <div align="center">
 
-<table>
+<table align="center">
   <tr>
     <td valign="top"><img src="./identity-card.svg" width="420" alt="Professional profile summary for Abhinav Rathee" /></td>
     <td valign="top"><img src="./stats.svg" width="420" alt="Abhinav's GitHub contribution and streak statistics" /></td>
@@ -17,7 +17,7 @@
 
 </div>
 
-<h2>Connect With Me</h2>
+<h2 align="center">Connect With Me</h2>
 
 <p align="center"><b>AI Engineer · Software Developer · Product Builder</b></p>
 
@@ -33,7 +33,7 @@
 
 ---
 
-<h2>Technical Stack</h2>
+<h2 align="center">Technical Stack</h2>
 
 <p align="center">Tools I use to build AI products, dependable services, and polished web apps.</p>
 
