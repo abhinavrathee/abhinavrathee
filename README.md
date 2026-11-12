@@ -1,10 +1,10 @@
-<div align="center">
+<h2>About Me</h2>
 
-<h3><code>abhinav@github ~ $ whoami</code></h3>
+<div align="center">
 
 <table>
   <tr>
-    <td valign="top"><img src="./identity-card.svg" width="420" alt="Terminal-style introduction for Abhinav Rathee" /></td>
+    <td valign="top"><img src="./identity-card.svg" width="420" alt="Professional profile summary for Abhinav Rathee" /></td>
     <td valign="top"><img src="./stats.svg" width="420" alt="Abhinav's GitHub contribution and streak statistics" /></td>
   </tr>
 </table>
@@ -13,11 +13,13 @@
 
 <img src="./assets/extended/language-bars.svg" width="620" alt="Top programming languages by bytes and public repository count">
 
-<br><br>
+<br>
 
-<h3><code>abhinav@github ~ $ ./links.sh</code></h3>
+</div>
 
-<p><b>AI Engineer · Software Developer · Product Builder</b></p>
+<h2>Connect With Me</h2>
+
+<p align="center"><b>AI Engineer · Software Developer · Product Builder</b></p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/abhinav-rathee/"><img src="https://img.shields.io/badge/LinkedIn-abhinav--rathee-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" height="24"></a>
@@ -29,13 +31,9 @@
   <img src="https://komarev.com/ghpvc/?username=abhinavrathee&style=flat-square&color=8b5cf6&label=profile+views" alt="Profile views" height="24">
 </p>
 
-<br>
-
-</div>
-
 ---
 
-<h2 align="center">Technical Stack</h2>
+<h2>Technical Stack</h2>
 
 <p align="center">Tools I use to build AI products, dependable services, and polished web apps.</p>
 
