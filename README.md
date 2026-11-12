@@ -26,7 +26,7 @@
   <a href="https://rathee.is-a.dev/"><img src="https://img.shields.io/badge/Portfolio-rathee.is--a.dev-181717?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio" height="24"></a>
   <a href="mailto:abhinav1rathee@gmail.com"><img src="https://img.shields.io/badge/Gmail-abhinav1rathee%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" height="24"></a>
   <a href="https://x.com/abhinavratheee"><img src="https://img.shields.io/badge/X-%40abhinavratheee-000000?style=flat-square&logo=x&logoColor=white" alt="X" height="24"></a>
-  <a href="https://leetcode.com/u/r-abhinaver/"><img src="https://img.shields.io/badge/LeetCode-r--abhinaver-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode" height="24"></a>
+  <a href="https://leetcode.com/u/abhinavrathee/"><img src="https://img.shields.io/badge/LeetCode-abhinavrathee-FFA116?style=flat-square&logo=leetcode&logoColor=black" alt="LeetCode" height="24"></a>
   <a href="https://linktr.ee/abhinavrathee"><img src="https://img.shields.io/badge/Linktree-All+links-43E55E?style=flat-square&logo=linktree&logoColor=white" alt="Linktree" height="24"></a>
   <img src="https://komarev.com/ghpvc/?username=abhinavrathee&style=flat-square&color=8b5cf6&label=profile+views" alt="Profile views" height="24">
 </p>
