@@ -2,9 +2,9 @@
   "username": "abhinavrathee",
   "range": {
     "start": "2025-11-16",
-    "end": "2026-11-20"
+    "end": "2026-11-21"
   },
-  "total_contributions": 483,
+  "total_contributions": 481,
   "active_days": 70,
   "avg_per_active_day": 6.9,
   "current_streak": {
@@ -72,7 +72,7 @@
     },
     {
       "month": "2026-11",
-      "total": 104
+      "total": 102
     }
   ],
   "days": [
@@ -1579,7 +1579,7 @@
     {
       "date": "2026-09-12",
       "count": 23,
-      "level": 2
+      "level": 3
     },
     {
       "date": "2026-09-13",
@@ -1833,12 +1833,12 @@
     },
     {
       "date": "2026-11-02",
-      "count": 2,
+      "count": 1,
       "level": 1
     },
     {
       "date": "2026-11-03",
-      "count": 46,
+      "count": 45,
       "level": 4
     },
     {
@@ -1923,6 +1923,11 @@
     },
     {
       "date": "2026-11-20",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-21",
       "count": 0,
       "level": 0
     }
