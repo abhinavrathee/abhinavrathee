@@ -2,7 +2,7 @@
   "username": "abhinavrathee",
   "range": {
     "start": "2025-11-23",
-    "end": "2026-11-27"
+    "end": "2026-11-28"
   },
   "total_contributions": 481,
   "active_days": 70,
@@ -1923,6 +1923,11 @@
     },
     {
       "date": "2026-11-27",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-28",
       "count": 0,
       "level": 0
     }
